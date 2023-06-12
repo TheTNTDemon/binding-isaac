@@ -4,14 +4,7 @@ html, body {
 	height: 100vh;
 	margin: 0;
 	padding: 0;
-	overflow: auto;
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
-	scroll-snap-type: both mandatory;
-}
-
-body::-webkit-scrollbar {
-	width: 0px !important; /* Safari and Chrome */
+	image-rendering: pixelated;
 }
 
 .character {
@@ -45,6 +38,29 @@ body::-webkit-scrollbar {
 	}
 }
 
+.inventory {
+	z-index: 1000;
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+}
+
+.inventory img {
+	width: 7rem;
+	height: 7rem;
+	display: none;
+}
+
+.health {
+	z-index: 1000;
+	position: fixed;
+	width: 20vw;
+}
+
+.health img {
+	width: 30%;
+}
+
 main {
 	width: 100vw;
 	height: 100vh;
@@ -56,6 +72,16 @@ main {
 		'level-1-4 level-2-4 level-3-4 level-4-4'
 	;
 	touch-action: pan-x pan-y;
+	
+	
+	scroll-snap-type: both mandatory;
+	overflow: auto;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+main::-webkit-scrollbar {
+	width: 0px !important; /* Safari and Chrome */
 }
 
 section {
